@@ -1,0 +1,163 @@
+/* Estilos generales para la página principal */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Encabezado y pie de página */
+header, footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+/* Contenido principal */
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li.selected a {
+    background-color: #666;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Pie de página */
+footer p {
+    margin: 0;
+}
+
+/* Formulario*/
+/* Estructura general */
+
+/* Formulario de contacto */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-label {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.floating-label input,
+.floating-label textarea {
+    width: 100%;
+    padding: 25px 20px;
+    border: 1px solid #807f7f;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #252525;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.floating-label input:focus,
+.floating-label textarea:focus {
+    border-color: #5e5e5e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.floating-label textarea {
+    height: 120px;
+    resize: none;
+}
+
+.floating-label label {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+    top: -15px;
+    left: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Botón de envío */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}

@@ -1,0 +1,181 @@
+/* Estilos generales para el sitio web */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header, footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li.selected a {
+    background-color: #666;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Sección de promoción */
+.promocion-grid-2024 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Fila de 5 columnas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.promocion-item-2024 {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #7a7979;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.promocion-item-2024:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.promocion-item-2024 img {
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.promocion-item-2024:hover img {
+    transform: scale(1.1);
+}
+
+.promocion-item-2024 .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.promocion-item-2024 .frase {
+    font-size: 14px;
+    color: #555;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 5px;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.4;
+}
+
+.promocion-item-2024:hover .frase {
+    opacity: 1;
+}
+
+/* Estilos del pie de página */
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Consultas de medios para diseño adaptable */
+@media (max-width: 1200px) {
+    .promocion-grid-2024 {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .promocion-grid-2024 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .promocion-grid-2024 {
+        grid-template-columns: 1fr; /* 1 columna para pantallas muy pequeñas */
+    }
+}
+
+/* Centrado del contenido de texto e imágenes */
+.titulo-centro {
+    text-align: center;
+}
+
+.imagen-centro img {
+    display: block;
+    margin: 0 auto;
+}

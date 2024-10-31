@@ -1,0 +1,297 @@
+/* Estilos generales para el sitio web */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header, footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Barra de navegación */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo para el enlace seleccionado */
+nav ul li.selected a {
+    background-color: #666;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+/* Efecto hover con área más amplia */
+nav ul li a:hover {
+    background-color: #555;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Sección de promoción */
+.promocion-grid-2024 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Limita a 5 columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.promocion-item-2024 {
+    position: relative;
+    width: 150px;
+    height: 260px; /* Incrementa la altura de la tarjeta */
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Asegura que el contenido comience desde arriba */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.promocion-item-2024 img {
+    width: 100%;
+    height: 120px; /* Ajusta la altura de la imagen */
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promocion-item-2024:hover img {
+    transform: scale(1.1); /* Efecto de acercamiento en la imagen */
+}
+
+.promocion-item-2024 .titulo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.promocion-item-2024 .frase {
+    font-size: 14px;
+    color: #555;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease;
+    margin-top: 5px;
+}
+
+.promocion-item-2024:hover .frase {
+    opacity: 1; /* Visible al hacer hover */
+}
+
+/* Estilos del pie de página */
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Consultas de medios para diseño adaptable */
+@media (max-width: 768px) {
+    .promocion-grid-2024 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .promocion-grid-2024 {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}
+
+/* Formulario de contacto centrado */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto; /* Esto centrará horizontalmente el formulario */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Para centrar el botón y cualquier texto dentro del formulario */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajustes para centrar los campos dentro del formulario */
+.floating-label {
+    position: relative;
+    width: 100%; /* El ancho completo del contenedor del formulario */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.floating-label input,
+.floating-label textarea {
+    width: 100%; /* Asegurarse de que los campos ocupen el ancho completo */
+    padding: 25px 20px; /* Aumentar padding para más separación vertical y horizontal */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Asegurarse de que el relleno se incluya dentro del ancho total */
+}
+
+.floating-label input:focus,
+.floating-label textarea:focus {
+    border-color: #666;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.floating-label textarea {
+    height: 120px;
+    resize: none;
+}
+
+.floating-label label {
+    position: absolute;
+    top: 25px; /* Mayor separación del borde superior */
+    left: 25px; /* Mayor separación del borde izquierdo */
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+    top: -15px; /* La etiqueta subirá más claramente cuando el campo esté activo */
+    left: 20px; /* Mantener margen horizontal cuando esté flotante */
+    font-size: 12px; /* Reducir tamaño de la etiqueta */
+    color: #666;
+}
+
+/* Botón de envío */
+.submit-button {
+    display: block;
+    width: 100%; /* Ajustar el botón para ocupar el ancho completo del contenedor */
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Añadir un margen superior para separar el botón del campo anterior */
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+/* Sección de tarjetas */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilo de cada tarjeta */
+.tarjeta {
+    width: calc(50% - 10px);
+    background-color: #f9f9f9;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: width 0.3s ease;
+}
+
+.tarjeta img {
+    width: 100%; /* La imagen ocupará todo el ancho de la tarjeta */
+    max-width: 400px; /* Ajusta este valor según el tamaño máximo deseado */
+    max-height: 200px; /* Ajusta este valor según el tamaño máximo deseado */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    object-fit: cover; /* Mantiene la imagen ajustada dentro del contenedor */
+    display: block;
+    margin: 0 auto;
+}
+
+.tarjeta p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0 0;
+}
+
+.tarjeta-ancha {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    margin: 0; /* Elimina el margen si es necesario */
+}
+
+.titulo-centro {
+    text-align: center;
+}
+
+.imagen-centro img {
+    display: block;
+    margin: 0 auto;
+}
